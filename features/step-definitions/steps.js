@@ -30,17 +30,16 @@ Then(/^I see that I am logged in correctly$/, async () => {
 
 
 // Registration
-Given(/^I press the register button$/, async () => {
-    await RegisterPage.enterBtnRegistration();
-});
-
 When(/^I register with (.+), (.+), (.+), (.+) and (.+)$/, async (
     firstname,
     lastname,
     email,
     password,
     confirmPassword) => {
-    await RegisterPage.registration(
+    await expect(RegisterPage.loginForm).toBeExisting();
+    await expect(RegisterPage.registerForm).toBeExisting();
+    await expect(RegisterPage.registerForm).toHaveTextContaining('No tienes cuenta?');
+        await RegisterPage.registration(
         firstname,
         lastname,
         email,

@@ -1,6 +1,6 @@
 class RegisterPage {
     get btnRegister () {
-        return $('p a');
+        return $("p[class=' text-center font-bold'] a");
     }
 
     get inputFirstname () {
@@ -39,11 +39,16 @@ class RegisterPage {
         return $('div[class="notice alert alert-danger"]');
     }
 
-    async enterBtnRegistration () {
-        await this.btnRegister.click();
+    get loginForm () {
+        return $('p[class="font-extrabold text-center"]');
+    }
+
+    get registerForm () {
+        return $('p[class=" text-center font-bold"]');
     }
 
     async registration (firstname, lastname, email, password, confirmPassword) {
+        await this.btnRegister.click();
         await this.inputFirstname.setValue(firstname);
         await this.inputLastname.setValue(lastname);
         await this.inputEmail.setValue(email);

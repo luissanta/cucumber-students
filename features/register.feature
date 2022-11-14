@@ -4,13 +4,11 @@ Feature: Registration on the page of the students of the Universidad de los Ande
 
     Given I am on the uniandes sub page
     And I enter the login form
-    And I press the register button
     When I register with <firstname>, <lastname>, <email>, <password> and <confirmPassword>
     Then I see an alert for the input fields with <message>
 
     Examples:
       | firstname | lastname | email                  | password   | confirmPassword | message                              |
-      | Test      | Cucumber | cumfsyuniandes.edu.co  | gfsdgfdhgf | gfsdgfdhgf      | Ingresa un correo electrónico válido |
       | Test      | Cucumber | cumfsytu@niandes.      | gfsdgfdhgf | gfsdgfdhgf      | Ingresa un correo electrónico válido |
       | Test      | Cucumber | cumfyu@uniandes.edu.co | gfsdgfdhgf | gfsdgfdhg3      | Las contraseñas no coinciden         |
       | Test      | Cucumber | cu3fyu@uniandes.edu.co | gfsdg      | gfsdg           | La contraseña debe tener 8 caracteres|
@@ -20,7 +18,6 @@ Feature: Registration on the page of the students of the Universidad de los Ande
 
     Given I am on the uniandes sub page
     And I enter the login form
-    And I press the register button
     When I register with <firstname>, <lastname>, <email>, <password> and <confirmPassword>
     Then I want to see a message with an alert by already existing user
 
@@ -33,10 +30,9 @@ Feature: Registration on the page of the students of the Universidad de los Ande
 
     Given I am on the uniandes sub page
     And I enter the login form
-    And I press the register button
     When I register with <firstname>, <lastname>, <email>, <password> and <confirmPassword>
     Then I want to see a message confirming my successful registration
 
     Examples:
-      | firstname | lastname | email                  | password   | confirmPassword |
-      | Test      | Cucumber | 2qwe4f@uniandes.edu.co | gfsdgfdhgf | gfsdgfdhgf      |
+      | firstname | lastname | email                    | password   | confirmPassword |
+      | Test      | Cucumber | 98hsdf74@uniandes.edu.co | gfsdgfdhgf | gfsdgfdhgf      |
