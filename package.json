@@ -1,0 +1,22 @@
+{
+  "name": "cucumber-webdriverio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "wdio": "wdio run wdio.conf.js"
+  },
+  "author": "luis santa",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.26.0"
+  },
+  "devDependencies": {
+    "@wdio/cucumber-framework": "^7.26.0",
+    "@wdio/local-runner": "^7.26.0",
+    "@wdio/spec-reporter": "^7.26.0",
+    "chromedriver": "^107.0.3",
+    "wdio-chromedriver-service": "^8.0.0"
+  }
+}
